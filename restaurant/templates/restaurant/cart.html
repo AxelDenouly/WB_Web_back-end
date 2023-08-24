@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    {% for order in orders %}
+        <h2>{{ order.product.name }}</h2>
+        <p>{{ order.quantity }} in the cart</p>
+    {% endfor %}
+
+    <a href="{% url 'delete-cart' %}">Delete the cart</a>
+
+{% endblock %}
